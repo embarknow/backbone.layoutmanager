@@ -28,7 +28,7 @@
 
   // Browser globals.
   else {
-    factory.call(window, window.Backbone, window._, window.Backbone.$);
+    factory.call(window, window.Backbone, window._, (window.jQuery || window.Zepto || window.ender || window.$));
   }
 }(typeof global === "object" ? global : this, function (Backbone, _, $) {
 "use strict";
